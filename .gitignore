@@ -9,6 +9,7 @@
 Library/
 Temp/
 Build/
+Logs/
 Assets/Resources/Jobs/
 *.orig
 *.orig.meta
