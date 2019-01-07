@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEditor;
@@ -196,5 +195,41 @@ public class BoardCreator : MonoBehaviour
             t.Load(v);
             tiles.Add(t.pos, t);
         }
+    }
+
+    public void SelectLeft()
+    {
+        if (--pos.x < 0)
+        {
+            pos.x = 0;
+        }
+        UpdateMarker();
+    }
+
+    public void SelectRight()
+    {
+        if (++pos.x > width)
+        {
+            pos.x = width;
+        }
+        UpdateMarker();
+    }
+
+    public void SelectUp()
+    {
+        if(++pos.y > depth)
+        {
+            pos.y = depth;
+        }
+        UpdateMarker();
+    }
+
+    public void SelectDown()
+    {
+        if(--pos.y < 0)
+        {
+            pos.y = 0;
+        }
+        UpdateMarker();
     }
 }

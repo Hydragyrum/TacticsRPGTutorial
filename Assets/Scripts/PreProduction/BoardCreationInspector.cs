@@ -45,5 +45,36 @@ public class BoardCreationInspector : Editor
         {
             current.UpdateMarker();
         }
+
+        CheckKeyboardInput();
+    }
+
+    void OnSceneGUI()
+    {
+        CheckKeyboardInput();
+    }
+
+    private void CheckKeyboardInput()
+    {
+        Event e = Event.current;
+        if (e.type == EventType.KeyDown)
+        {
+            if (e.keyCode == KeyCode.A)
+            {
+                current.SelectLeft();
+            }
+            if (e.keyCode == KeyCode.D)
+            {
+                current.SelectRight();
+            }
+            if (e.keyCode == KeyCode.W)
+            {
+                current.SelectUp();
+            }
+            if (e.keyCode == KeyCode.S)
+            {
+                current.SelectDown();
+            }
+        }
     }
 }
