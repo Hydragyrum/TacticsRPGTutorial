@@ -14,3 +14,4 @@ Assets/Resources/Jobs/
 *.orig
 *.orig.meta
 Jobs.meta
+.idea
