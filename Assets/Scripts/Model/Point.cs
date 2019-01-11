@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 [System.Serializable]
 public struct Point
