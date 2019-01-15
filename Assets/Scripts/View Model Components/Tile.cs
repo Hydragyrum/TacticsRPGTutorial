@@ -9,6 +9,10 @@ public class Tile : MonoBehaviour
     public int height;
     public Vector3 centre => new Vector3(pos.x, height * stepHeight, pos.y);
 
+    public GameObject content;
+
+    [HideInInspector] public Tile prev;
+    [HideInInspector] public int distance;
 
     void Match()
     {
