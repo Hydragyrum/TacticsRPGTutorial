@@ -43,7 +43,8 @@ public abstract class Movement : MonoBehaviour
     protected virtual IEnumerator Turn(Directions dir)
     {
         TransformLocalEulerAnglesTweener t =
-            (TransformLocalEulerAnglesTweener) transform.RotateToLocal(dir.ToEuler(), 0.25f, EasingFunctions.EaseInOutQuad)
+            (TransformLocalEulerAnglesTweener) transform.RotateToLocal(dir.ToEuler(), 0.25f,
+                EasingFunctions.EaseInOutQuad);
 
         if (Mathf.Approximately(t.startValue.y, 0.0f) && Mathf.Approximately(t.endValue.y, 270.0f))
         {
