@@ -70,6 +70,11 @@ public class LayoutAnchor : MonoBehaviour
 
     public void SnapToAnchorPosition(TextAnchor myAnchor, TextAnchor parentAnchor, Vector2 offset)
     {
+        myRT.anchoredPosition = AnchorPosition(myAnchor, parentAnchor, offset);
+    }
+
+    public Tweener MoveToAnchorPosition(TextAnchor myAnchor, TextAnchor parentAnchor, Vector2 offset)
+    {
         return myRT.AnchorTo(AnchorPosition(myAnchor, parentAnchor, offset));
     }
 }
